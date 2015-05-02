@@ -134,7 +134,7 @@ func (c *Config) initSensu() {
 	}
 
 	if url := os.Getenv("SENSU_API_URL"); url != "" && len(c.Sensu) == 0 {
-		c.Sensu = append(c.Sensu, SensuConfig{URL: url, Timeout: 10})
+		c.Sensu = append(c.Sensu, SensuConfig{URL: url, Timeout: 10, Name: "Sensu"})
 	}
 }
 
