@@ -1,14 +1,17 @@
-FROM golang:1.3.3-onbuild
+FROM busybox:latest
 
-# install debian packages
-RUN apt-get update \
-&& apt-get install -yq nodejs npm git wget \
-&& ln -s /usr/bin/nodejs /usr/bin/node \
-&& npm install --production --unsafe-perm \
-&& mv ./docker/start /start && chmod 0755 /start
 
-VOLUME /config
+ADD https://github.com/upfluence/etcdenv/releases/download/v0.1.2/etcdenv-linux-amd64-0.1.2 /usr/bin/etcdenv
+ADD https://github.com/upfluence/uchiwa/releases/download/v0.8.1/uchiwa-linux-amd64 /uchiwa
+ADD https://github.com/upfluence/uchiwa/releases/download/v0.8.1/public.zip /public.zip
 
-CMD ["/start"]
+RUN chmod +x /usr/bin/etcdenv
+RUN chmod +x /uchiwa
+RUN unzip public.zip -d . && rm public.zip
 
 EXPOSE 3000
+
+ENV UCHIWA_PORT 3000
+ENV SENSU_NAMESPACE /environments/sensu
+
+CMD  etcdenv -n $SENSU_NAMESPACE -s http://172.17.42.1:4001 /uchiwa -p /public
