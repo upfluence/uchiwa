@@ -5,11 +5,11 @@ import (
 
 	"github.com/palourde/logger"
 	"github.com/sensu/uchiwa/auth"
-	"github.com/sensu/uchiwa/uchiwa"
+	"github.com/upfluence/uchiwa/uchiwa"
 )
 
 func main() {
-	configFile := flag.String("c", "./config.json", "Full or relative path to the configuration file")
+	configFile := flag.String("c", "", "Full or relative path to the configuration file")
 	publicPath := flag.String("p", "public", "Full or relative path to the public directory")
 	flag.Parse()
 

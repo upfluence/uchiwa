@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"math/rand"
 	"os"
+	"strconv"
 
 	"github.com/palourde/logger"
 )
@@ -95,6 +96,10 @@ func (c *Config) initSensu() {
 		}
 		c.Sensu[i].URL = fmt.Sprintf("%s://%s:%d%s", prot, api.Host, c.Sensu[i].Port, api.Path)
 	}
+
+	if url := os.Getenv("SENSU_API_URL"); url != "" && len(c.Sensu) == 0 {
+		c.Sensu = append(c.Sensu, SensuConfig{URL: url, Timeout: 10})
+	}
 }
 
 func (c *Config) initGlobal() {
@@ -105,7 +110,17 @@ func (c *Config) initGlobal() {
 		c.Uchiwa.Host = "0.0.0.0"
 	}
 	if c.Uchiwa.Port == 0 {
-		c.Uchiwa.Port = 3000
+		if port := os.Getenv("UCHIWA_PORT"); port != "" {
+			p, err := strconv.Atoi(port)
+
+			if err != nil {
+				logger.Fatalf(err.Error())
+			}
+
+			c.Uchiwa.Port = p
+		} else {
+			c.Uchiwa.Port = 3000
+		}
 	}
 	if c.Uchiwa.Refresh == 0 {
 		c.Uchiwa.Refresh = 10
@@ -151,21 +166,23 @@ func buildPublicConfig(c *Config) {
 
 // LoadConfig function loads a specified configuration file and return a Config struct
 func LoadConfig(path string) (*Config, error) {
-	logger.Infof("Loading configuration file %s", path)
 	c := new(Config)
-	file, err := os.Open(path)
-	if err != nil {
-		if len(path) > 1 {
-			return nil, fmt.Errorf("Error: could not read config file %s.", path)
+
+	if path != "" {
+		logger.Infof("Loading configuration file %s", path)
+		file, err := os.Open(path)
+		if err != nil {
+			if len(path) > 1 {
+				return nil, fmt.Errorf("Error: could not read config file %s.", path)
+			}
+		}
+
+		decoder := json.NewDecoder(file)
+		err = decoder.Decode(c)
+		if err != nil {
+			return nil, fmt.Errorf("Error decoding file %s: %s", path, err)
 		}
 	}
-
-	decoder := json.NewDecoder(file)
-	err = decoder.Decode(c)
-	if err != nil {
-		return nil, fmt.Errorf("Error decoding file %s: %s", path, err)
-	}
-
 	c.initGlobal()
 	c.initSensu()
 
