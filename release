@@ -1,0 +1,18 @@
+#!/bin/sh
+
+version=$1
+
+git tag v$version
+
+GOOS=linux CGO_ENABLED=0 GOARCH=amd64 go build -o uchiwa-linux-amd64 .
+GOOS=darwin CGO_ENABLED=0 GOARCH=amd64 go build -o uchiwa-darwin-amd64 .
+
+npm install --production
+
+tar -zcvf public.tar public/
+
+hub release create -a uchiwa-linux-amd64 -a uchiwa-darwin-amd64 \
+  -a public.tar  v$version
+
+rm uchiwa-*
+rm public.tar
