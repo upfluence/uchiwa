@@ -132,6 +132,10 @@ func (c *Config) initSensu() {
 		}
 		c.Sensu[i].URL = fmt.Sprintf("%s://%s:%d%s", prot, api.Host, c.Sensu[i].Port, api.Path)
 	}
+
+	if url := os.Getenv("SENSU_API_URL"); url != "" && len(c.Sensu) == 0 {
+		c.Sensu = append(c.Sensu, SensuConfig{URL: url, Timeout: 10})
+	}
 }
 
 func (c *Config) initUchiwa() {
@@ -142,7 +146,17 @@ func (c *Config) initUchiwa() {
 		c.Uchiwa.Host = "0.0.0.0"
 	}
 	if c.Uchiwa.Port == 0 {
-		c.Uchiwa.Port = 3000
+		if port := os.Getenv("UCHIWA_PORT"); port != "" {
+			p, err := strconv.Atoi(port)
+
+			if err != nil {
+				logger.Fatalf(err.Error())
+			}
+
+			c.Uchiwa.Port = p
+		} else {
+			c.Uchiwa.Port = 3000
+		}
 	}
 	if c.Uchiwa.Refresh == 0 {
 		c.Uchiwa.Refresh = 10

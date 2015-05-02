@@ -3,16 +3,16 @@ package main
 import (
 	"flag"
 
-	"github.com/sensu/uchiwa/uchiwa"
-	"github.com/sensu/uchiwa/uchiwa/audit"
-	"github.com/sensu/uchiwa/uchiwa/auth"
-	"github.com/sensu/uchiwa/uchiwa/config"
-	"github.com/sensu/uchiwa/uchiwa/filters"
-	"github.com/sensu/uchiwa/uchiwa/logger"
+	"github.com/upfluence/uchiwa/uchiwa"
+	"github.com/upfluence/uchiwa/uchiwa/audit"
+	"github.com/upfluence/uchiwa/uchiwa/auth"
+	"github.com/upfluence/uchiwa/uchiwa/config"
+	"github.com/upfluence/uchiwa/uchiwa/filters"
+	"github.com/upfluence/uchiwa/uchiwa/logger"
 )
 
 func main() {
-	configFile := flag.String("c", "./config.json", "Full or relative path to the configuration file")
+	configFile := flag.String("c", "", "Full or relative path to the configuration file")
 	publicPath := flag.String("p", "public", "Full or relative path to the public directory")
 	flag.Parse()
 
