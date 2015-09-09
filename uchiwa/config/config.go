@@ -87,19 +87,20 @@ type Ldap struct {
 func Load(path string) (*Config, error) {
 	logger.Infof("Loading configuration file %s", path)
 	c := new(Config)
-	file, err := os.Open(path)
-	if err != nil {
-		if len(path) > 1 {
-			return nil, fmt.Errorf("Error: could not read config file %s.", path)
+	if path != "" {
+		file, err := os.Open(path)
+		if err != nil {
+			if len(path) > 1 {
+				return nil, fmt.Errorf("Error: could not read config file %s.", path)
+			}
+		}
+
+		decoder := json.NewDecoder(file)
+		err = decoder.Decode(c)
+		if err != nil {
+			return nil, fmt.Errorf("Error decoding file %s: %s", path, err)
 		}
 	}
-
-	decoder := json.NewDecoder(file)
-	err = decoder.Decode(c)
-	if err != nil {
-		return nil, fmt.Errorf("Error decoding file %s: %s", path, err)
-	}
-
 	c.initUchiwa()
 	c.initSensu()
 
