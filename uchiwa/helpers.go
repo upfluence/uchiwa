@@ -6,9 +6,9 @@ import (
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/mitchellh/mapstructure"
-	"github.com/sensu/uchiwa/uchiwa/auth"
-	"github.com/sensu/uchiwa/uchiwa/logger"
-	"github.com/sensu/uchiwa/uchiwa/sensu"
+	"github.com/upfluence/uchiwa/uchiwa/auth"
+	"github.com/upfluence/uchiwa/uchiwa/logger"
+	"github.com/upfluence/uchiwa/uchiwa/sensu"
 )
 
 func getAPI(datacenters *[]sensu.Sensu, name string) (*sensu.Sensu, error) {

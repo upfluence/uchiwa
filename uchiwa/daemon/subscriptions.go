@@ -2,8 +2,8 @@ package daemon
 
 import (
 	"github.com/mitchellh/mapstructure"
-	"github.com/sensu/uchiwa/uchiwa/logger"
-	"github.com/sensu/uchiwa/uchiwa/structs"
+	"github.com/upfluence/uchiwa/uchiwa/logger"
+	"github.com/upfluence/uchiwa/uchiwa/structs"
 )
 
 // BuildSubscriptions builds a slice of every client subscriptions

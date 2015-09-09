@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/sensu/uchiwa/uchiwa/structs"
+	"github.com/upfluence/uchiwa/uchiwa/structs"
 )
 
 // Info Will return the Sensu version along with rabbitmq and redis information.

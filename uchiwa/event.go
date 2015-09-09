@@ -1,7 +1,7 @@
 package uchiwa
 
-import "github.com/sensu/uchiwa/uchiwa/logger"
-import "github.com/sensu/uchiwa/uchiwa/daemon"
+import "github.com/upfluence/uchiwa/uchiwa/logger"
+import "github.com/upfluence/uchiwa/uchiwa/daemon"
 
 // ResolveEvent send a POST request to the /resolve endpoint in order to resolve an event
 func (u *Uchiwa) ResolveEvent(data interface{}) error {

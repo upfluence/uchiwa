@@ -1,6 +1,6 @@
 package uchiwa
 
-import "github.com/sensu/uchiwa/uchiwa/logger"
+import "github.com/upfluence/uchiwa/uchiwa/logger"
 
 type stash struct {
 	Dc      string                 `json:"dc"`

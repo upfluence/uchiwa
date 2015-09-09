@@ -5,10 +5,11 @@ import (
 	"fmt"
 	"math/rand"
 	"os"
+	"strconv"
 	"strings"
 
-	"github.com/sensu/uchiwa/uchiwa/auth"
-	"github.com/sensu/uchiwa/uchiwa/logger"
+	"github.com/upfluence/uchiwa/uchiwa/auth"
+	"github.com/upfluence/uchiwa/uchiwa/logger"
 )
 
 // Config struct contains []SensuConfig and UchiwaConfig structs
@@ -121,7 +122,7 @@ func (c *Config) initSensu() {
 		}
 		if api.Timeout == 0 {
 			c.Sensu[i].Timeout = 10
-		} else if api.Timeout >= 1000 { // backward compatibility with < 0.3.0 version
+		} else if api.Timeout >= 1000 { // backward compatibility with < 0.3.1 version
 			c.Sensu[i].Timeout = api.Timeout / 1000
 		}
 		if api.Port == 0 {
@@ -160,7 +161,7 @@ func (c *Config) initUchiwa() {
 	}
 	if c.Uchiwa.Refresh == 0 {
 		c.Uchiwa.Refresh = 10
-	} else if c.Uchiwa.Refresh >= 1000 { // backward compatibility with < 0.3.0 version
+	} else if c.Uchiwa.Refresh >= 1000 { // backward compatibility with < 0.3.1 version
 		c.Uchiwa.Refresh = c.Uchiwa.Refresh / 1000
 	}
 

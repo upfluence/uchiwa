@@ -1,132 +1,132 @@
 ### 0.10.4 (2015-09-01)
 #### Bug Fixes
-- Order alphabetically the items in the checks filter - [Issue #62](https://github.com/sensu/uchiwa-web/pull/62)
-- Fix client view table for RO users - [Issue #63](https://github.com/sensu/uchiwa-web/pull/63)
-- Visual improvements to client view when resizing to a narrow view - [Issue #64](https://github.com/sensu/uchiwa-web/pull/64)
-- Fix favicon for Firefox - [Issue #376](https://github.com/sensu/uchiwa/pull/367)
-- Add support for Sensu Enteprise OpenLDAP driver - [Issue #369](https://github.com/sensu/uchiwa/pull/369)
-- Add support for Sensu Enteprise audit logging - [Issue #370](https://github.com/sensu/uchiwa/pull/370)
+- Order alphabetically the items in the checks filter - [Issue #62](https://github.com/upfluence/uchiwa-web/pull/62)
+- Fix client view table for RO users - [Issue #63](https://github.com/upfluence/uchiwa-web/pull/63)
+- Visual improvements to client view when resizing to a narrow view - [Issue #64](https://github.com/upfluence/uchiwa-web/pull/64)
+- Fix favicon for Firefox - [Issue #376](https://github.com/upfluence/uchiwa/pull/367)
+- Add support for Sensu Enteprise OpenLDAP driver - [Issue #369](https://github.com/upfluence/uchiwa/pull/369)
+- Add support for Sensu Enteprise audit logging - [Issue #370](https://github.com/upfluence/uchiwa/pull/370)
 
 ### 0.10.3 (2015-08-03)
 #### Features
-- Add status filter on the clients and events views - [Issue #61](https://github.com/sensu/uchiwa-web/pull/61)
+- Add status filter on the clients and events views - [Issue #61](https://github.com/upfluence/uchiwa-web/pull/61)
 - Add support for Sensu Enterprise dashboard
 
 ### 0.10.2 (2015-07-23)
 #### Features
-- Add username to stash content - [Issue #356](https://github.com/sensu/uchiwa/issues/356)
-- Replace silenced and critical icons - [Issue #56](https://github.com/sensu/uchiwa-web/pull/56)
+- Add username to stash content - [Issue #356](https://github.com/upfluence/uchiwa/issues/356)
+- Replace silenced and critical icons - [Issue #56](https://github.com/upfluence/uchiwa-web/pull/56)
 - Add support for audit logging - Sensu Enterprise Dashboard
 
 #### Bug Fixes
-- Reimplement iframe support - [Issue #354](https://github.com/sensu/uchiwa/issues/354)
-- Display any error with the http.ListenAndServe method - [Issue #352](https://github.com/sensu/uchiwa/issues/352)
+- Reimplement iframe support - [Issue #354](https://github.com/upfluence/uchiwa/issues/354)
+- Display any error with the http.ListenAndServe method - [Issue #352](https://github.com/upfluence/uchiwa/issues/352)
 
 ### 0.10.1 (2015-06-30)
 #### Bug Fixes
-- Fix check result view for standalone checks - [Issue #350](https://github.com/sensu/uchiwa/issues/350)
+- Fix check result view for standalone checks - [Issue #350](https://github.com/upfluence/uchiwa/issues/350)
 
 ### 0.10.0 (2015-06-29)
 
 #### Features
-- Multiple users (RO & RW) can be defined in the configuration - [Issue #343](https://github.com/sensu/uchiwa/pull/343)
-- The theme setting is now saved in a cookie - [Issue #331](https://github.com/sensu/uchiwa/issues/331)
-- Display the output of all checks in the check result view - [Issue #346](https://github.com/sensu/uchiwa/issues/346)
-- Enhancements to the check result images - [Issue #50](https://github.com/sensu/uchiwa-web/pull/50)
+- Multiple users (RO & RW) can be defined in the configuration - [Issue #343](https://github.com/upfluence/uchiwa/pull/343)
+- The theme setting is now saved in a cookie - [Issue #331](https://github.com/upfluence/uchiwa/issues/331)
+- Display the output of all checks in the check result view - [Issue #346](https://github.com/upfluence/uchiwa/issues/346)
+- Enhancements to the check result images - [Issue #50](https://github.com/upfluence/uchiwa-web/pull/50)
 
 #### Bug Fixes
-- The info view might have been incomplete - [Issue #51](https://github.com/sensu/uchiwa-web/pull/51)
-- Disable autocapitalization and autocorrection on the login view - [Issue #296](https://github.com/sensu/uchiwa/issues/296)
-- Remove unsupported characters in datacenter name - [Issue #279](https://github.com/sensu/uchiwa/issues/279)
-- Continue to pull the client details even when an error is returned - [Issue #265](https://github.com/sensu/uchiwa/issues/265)
+- The info view might have been incomplete - [Issue #51](https://github.com/upfluence/uchiwa-web/pull/51)
+- Disable autocapitalization and autocorrection on the login view - [Issue #296](https://github.com/upfluence/uchiwa/issues/296)
+- Remove unsupported characters in datacenter name - [Issue #279](https://github.com/upfluence/uchiwa/issues/279)
+- Continue to pull the client details even when an error is returned - [Issue #265](https://github.com/upfluence/uchiwa/issues/265)
 
 ### 0.9.1 (2015-06-10)
 #### Bug Fixes
-- Performance issues - [Issue #337](https://github.com/sensu/uchiwa/issues/337)
+- Performance issues - [Issue #337](https://github.com/upfluence/uchiwa/issues/337)
 
 ### 0.9.0 (2015-06-09)
 #### Features
-- Display the output for all checks - [Issue #322](https://github.com/sensu/uchiwa/issues/322)
-- Various fixes and improvements to the backend - [Issue #330](https://github.com/sensu/uchiwa/pull/330)
+- Display the output for all checks - [Issue #322](https://github.com/upfluence/uchiwa/issues/322)
+- Various fixes and improvements to the backend - [Issue #330](https://github.com/upfluence/uchiwa/pull/330)
   - Godep is now used to manage vendored dependencies
   - Support for Sensu Enterprise dashboard features
   - Refactoring of the Go packages
-- Allow filtering by check on the checks view - [Issue #45](https://github.com/sensu/uchiwa-web/pull/45)
-- Include a result count when searching - [Issue #46](https://github.com/sensu/uchiwa-web/pull/46)
+- Allow filtering by check on the checks view - [Issue #45](https://github.com/upfluence/uchiwa-web/pull/45)
+- Include a result count when searching - [Issue #46](https://github.com/upfluence/uchiwa-web/pull/46)
 
 #### Bug Fixes
-- Better handling of invalid events - [Issue #332](https://github.com/sensu/uchiwa/issues/332)
-- A stash can only start now and not in the future - [Issue #48](https://github.com/sensu/uchiwa-web/pull/48)
+- Better handling of invalid events - [Issue #332](https://github.com/upfluence/uchiwa/issues/332)
+- A stash can only start now and not in the future - [Issue #48](https://github.com/upfluence/uchiwa-web/pull/48)
 
 ### 0.8.1 (2015-05-05)
 #### Features
-- Add profile picture to the navbar when logged - [Issue #44](https://github.com/sensu/uchiwa-web/pull/44)
+- Add profile picture to the navbar when logged - [Issue #44](https://github.com/upfluence/uchiwa-web/pull/44)
 
 #### Bug Fixes
-- Allow stash creation with no expiration - [Issue #319](https://github.com/sensu/uchiwa/issues/319)
-- Upgrade to angular-bootstrap 0.13.0 - [Issue #319](https://github.com/sensu/uchiwa/issues/319)
+- Allow stash creation with no expiration - [Issue #319](https://github.com/upfluence/uchiwa/issues/319)
+- Upgrade to angular-bootstrap 0.13.0 - [Issue #319](https://github.com/upfluence/uchiwa/issues/319)
 
 ### 0.8.0 (2015-04-29)
 #### Features
-- Import the palourde/auth library within the Uchiwa repository - [Issue #314](https://github.com/sensu/uchiwa/pull/314)
-- Refactoring of the stashes API endpoints - [Issue #317](https://github.com/sensu/uchiwa/pull/317)
-- Add relative times to stashes and clients views - [Issue #38](https://github.com/sensu/uchiwa-web/pull/38)
+- Import the palourde/auth library within the Uchiwa repository - [Issue #314](https://github.com/upfluence/uchiwa/pull/314)
+- Refactoring of the stashes API endpoints - [Issue #317](https://github.com/upfluence/uchiwa/pull/317)
+- Add relative times to stashes and clients views - [Issue #38](https://github.com/upfluence/uchiwa-web/pull/38)
 - Add support for Github authentication driver (Sensu Enterprise)
 - Add support for LDAP authentication driver (Sensu Enterprise)
 
 #### Bug Fixes
-- Allow stash creation with expiration longer than a few days - [Issue #301](https://github.com/sensu/uchiwa/issues/301)
-- Datacenter filter now performs a strict comparison - [Issue #307](https://github.com/sensu/uchiwa/issues/307)
-- Resolved events are now cleared from the clients view - [Issue #309](https://github.com/sensu/uchiwa/issues/309)
+- Allow stash creation with expiration longer than a few days - [Issue #301](https://github.com/upfluence/uchiwa/issues/301)
+- Datacenter filter now performs a strict comparison - [Issue #307](https://github.com/upfluence/uchiwa/issues/307)
+- Resolved events are now cleared from the clients view - [Issue #309](https://github.com/upfluence/uchiwa/issues/309)
 
 ### 0.7.1 (2015-04-01)
 #### Features
-- Show relative times for events - [Issue #28](https://github.com/sensu/uchiwa-web/pull/28)
-- Add datacenters view - [Issue #30](https://github.com/sensu/uchiwa-web/pull/30)
-- Order events by status, then by most recent - [Issue #33](https://github.com/sensu/uchiwa-web/pull/33)
+- Show relative times for events - [Issue #28](https://github.com/upfluence/uchiwa-web/pull/28)
+- Add datacenters view - [Issue #30](https://github.com/upfluence/uchiwa-web/pull/30)
+- Order events by status, then by most recent - [Issue #33](https://github.com/upfluence/uchiwa-web/pull/33)
 
 #### Bug Fixes
-- Remove *standalone* property from checks view - [Issue #29](https://github.com/sensu/uchiwa-web/pull/29)
-- Show logout button when authentication is enabled - [Issue #29](https://github.com/sensu/uchiwa-web/pull/29)
-- Ship Google fonts with Uchiwa - [Issue #35](https://github.com/sensu/uchiwa-web/pull/35)
+- Remove *standalone* property from checks view - [Issue #29](https://github.com/upfluence/uchiwa-web/pull/29)
+- Show logout button when authentication is enabled - [Issue #29](https://github.com/upfluence/uchiwa-web/pull/29)
+- Ship Google fonts with Uchiwa - [Issue #35](https://github.com/upfluence/uchiwa-web/pull/35)
 
 ### 0.7.0 (2015-03-13)
 #### Features
-- Reorganize the navbar and sidebar - [Issue #22](https://github.com/sensu/uchiwa-web/pull/22)
-- Panels styling - [Issue #23](https://github.com/sensu/uchiwa-web/pull/23)
-- Improvements to the aggregates view - [Issue #23](https://github.com/sensu/uchiwa-web/pull/23)
+- Reorganize the navbar and sidebar - [Issue #22](https://github.com/upfluence/uchiwa-web/pull/22)
+- Panels styling - [Issue #23](https://github.com/upfluence/uchiwa-web/pull/23)
+- Improvements to the aggregates view - [Issue #23](https://github.com/upfluence/uchiwa-web/pull/23)
 
 #### Bug Fixes
-- Unselect events after action in events view - [Issue #20](https://github.com/sensu/uchiwa-web/pull/20)
-- Fix stash expiration timestamp in stashes view - [Issue #25](https://github.com/sensu/uchiwa-web/pull/25)
+- Unselect events after action in events view - [Issue #20](https://github.com/upfluence/uchiwa-web/pull/20)
+- Fix stash expiration timestamp in stashes view - [Issue #25](https://github.com/upfluence/uchiwa-web/pull/25)
 
 ### 0.6.0 (2015-02-26)
 #### Features
-- Upgrade to AngularJS 1.3 - [Issue #160](https://github.com/sensu/uchiwa/issues/160)
-- Redesign of the panels header - [Issue #16](https://github.com/sensu/uchiwa-web/pull/16)
-- Add tooltip of items subscriptions on clients and events views - [Issue #16](https://github.com/sensu/uchiwa-web/pull/16)
+- Upgrade to AngularJS 1.3 - [Issue #160](https://github.com/upfluence/uchiwa/issues/160)
+- Redesign of the panels header - [Issue #16](https://github.com/upfluence/uchiwa-web/pull/16)
+- Add tooltip of items subscriptions on clients and events views - [Issue #16](https://github.com/upfluence/uchiwa-web/pull/16)
 
 ### 0.5.1 (2015-02-21)
 
 #### Features
-- Add *Silenced Clients* option to the Hide menu and show the acknowledgment status of the client in the events view - [Issue #12](https://github.com/sensu/uchiwa-web/pull/12)
+- Add *Silenced Clients* option to the Hide menu and show the acknowledgment status of the client in the events view - [Issue #12](https://github.com/upfluence/uchiwa-web/pull/12)
 
 #### Bug Fixes
-- Register *uchiwa-web* as a bower package to prevent dependencies issues - [Issue #272](https://github.com/sensu/uchiwa/issues/272)
-- Fix build issue with 0.5.0 release - [Issue #273](https://github.com/sensu/uchiwa/issues/273)
+- Register *uchiwa-web* as a bower package to prevent dependencies issues - [Issue #272](https://github.com/upfluence/uchiwa/issues/272)
+- Fix build issue with 0.5.0 release - [Issue #273](https://github.com/upfluence/uchiwa/issues/273)
 
 ### 0.5.0 (2015-02-14)
 
 #### Features
-- Add custom date functionality for stashes - [Issue #251](https://github.com/sensu/uchiwa/pull/251)
-- Aggregates support - [Issue #255](https://github.com/sensu/uchiwa/pull/255)
-- Use JSON Web Tokens (JWT) instead of HTTP basic authentication and implement a login page - [Issue #8](https://github.com/sensu/uchiwa-web/pull/8)
+- Add custom date functionality for stashes - [Issue #251](https://github.com/upfluence/uchiwa/pull/251)
+- Aggregates support - [Issue #255](https://github.com/upfluence/uchiwa/pull/255)
+- Use JSON Web Tokens (JWT) instead of HTTP basic authentication and implement a login page - [Issue #8](https://github.com/upfluence/uchiwa-web/pull/8)
 
 #### Bug Fixes
-- Catch possible exception while asserting the check name - [Issue #259](https://github.com/sensu/uchiwa/pull/259)
-- Display images when an URL has a port number - [Issue #2](https://github.com/sensu/uchiwa-web/pull/2)
-- Hide events with no client and no check - [Issue #9](https://github.com/sensu/uchiwa-web/pull/9)
-- Client names may not be unique - [Issue #11](https://github.com/sensu/uchiwa-web/pull/11)
+- Catch possible exception while asserting the check name - [Issue #259](https://github.com/upfluence/uchiwa/pull/259)
+- Display images when an URL has a port number - [Issue #2](https://github.com/upfluence/uchiwa-web/pull/2)
+- Hide events with no client and no check - [Issue #9](https://github.com/upfluence/uchiwa-web/pull/9)
+- Client names may not be unique - [Issue #11](https://github.com/upfluence/uchiwa-web/pull/11)
 
 ### 0.4.1 (2015-01-16)
 

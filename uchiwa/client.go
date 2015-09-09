@@ -3,8 +3,8 @@ package uchiwa
 import (
 	"fmt"
 
-	"github.com/sensu/uchiwa/uchiwa/logger"
-	"github.com/sensu/uchiwa/uchiwa/daemon"
+	"github.com/upfluence/uchiwa/uchiwa/logger"
+	"github.com/upfluence/uchiwa/uchiwa/daemon"
 )
 
 func (u *Uchiwa) buildClientHistory(id *string, history *[]interface{}, dc *string) {
